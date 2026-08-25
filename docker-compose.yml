@@ -1,0 +1,22 @@
+services:
+  instatic:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: instatic-cms
+    restart: unless-stopped
+    ports:
+      - "3000"
+    environment:
+      - NEXT_PUBLIC_APP_URL=${NEXT_PUBLIC_APP_URL}
+      - OST_GITHUB_ID=${OST_GITHUB_ID}
+      - OST_GITHUB_SECRET=${OST_GITHUB_SECRET}
+      - OST_REPO_SLUG=${OST_REPO_SLUG}
+      - OST_REPO_BRANCH=${OST_REPO_BRANCH:-main}
+      - OST_REPO_OWNER=${OST_REPO_OWNER}
+      - OST_CONTENT_PATH=${OST_CONTENT_PATH:-outstatic/content}
+    volumes:
+      - instatic-data:/app/outstatic
+
+volumes:
+  instatic-data:
