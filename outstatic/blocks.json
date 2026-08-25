@@ -1,0 +1,56 @@
+{
+  "blocks": [
+    {
+      "description": "Highlight important information in a styled notice",
+      "icon": "message-square-warning",
+      "keywords": [
+        "callout",
+        "notice",
+        "tip",
+        "warning"
+      ],
+      "name": "Callout",
+      "props": [
+        {
+          "description": "Short heading displayed above the message",
+          "name": "title",
+          "type": "String"
+        },
+        {
+          "defaultValue": "info",
+          "description": "Visual style for the notice",
+          "name": "type",
+          "options": [
+            "info",
+            "warning",
+            "success"
+          ],
+          "type": "Select"
+        },
+        {
+          "description": "Message displayed inside the callout",
+          "name": "children",
+          "required": true,
+          "type": "Children"
+        }
+      ]
+    },
+    {
+      "description": "Embed Youtube videos",
+      "icon": "video",
+      "keywords": [
+        "youtube"
+      ],
+      "name": "Youtube",
+      "props": [
+        {
+          "description": "Youtube video url",
+          "name": "url",
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "commit": "",
+  "generated": "2026-07-24T12:00:00.000Z"
+}
